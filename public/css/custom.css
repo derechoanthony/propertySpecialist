@@ -1,0 +1,129 @@
+.hidden {
+    display: none;
+}
+
+sup {
+    vertical-align: super;
+    font-size: smaller;
+    font-weight: bold;
+    top: -2px;
+}
+
+.propertydetail {
+    margin-top: -24px;
+}
+
+strong.error {
+    color: red;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+::-webkit-file-upload-button {
+    background: #6c757d;
+    color: #fff;
+    border-radius: 2px;
+}
+
+.header-font {
+    font-weight: 800 !important;
+    margin-bottom: 0px !important;
+    font-size: 24px !important;
+    line-height: 30px !important;
+    letter-spacing: normal !important;
+    /* background-color: #F7617B; */
+    /* color: #fff; */
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+    color: rgb(72, 72, 72) !important;
+}
+
+.form-group>label {
+    margin: 0px !important;
+    word-wrap: break-word !important;
+    font-size: 16px !important;
+    line-height: 22px !important;
+    letter-spacing: normal !important;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+    color: #484848 !important;
+    font-weight: normal !important;
+}
+
+.help-block>strong {
+    color: #E91E63;
+    font-size: 11px;
+}
+
+label>b {
+    font-weight: bolder;
+    color: red;
+}
+
+nav.navbar {
+    background: #686868;
+    padding: .8rem 0;
+}
+
+nav.navbar a.menu-btn {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background: #686868;
+    color: #fff;
+    text-align: center;
+    padding: 0 !important;
+}
+.side-navbar .sidenav-header {
+    background: #F16664;
+    padding: 14px;
+    margin-bottom: 10px;
+}
+.side-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    width: 200px;
+    text-align: left;
+    background: #525050;
+    color: #fff;
+    z-index: 999;
+    overflow-y: auto;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.side-navbar li a {
+    position: relative;
+    font-size: .9rem;
+    font-weight: 500 !important;
+    color: #fff;
+    text-decoration: none;
+    width: 100%;
+    padding: 12px;
+}
+
+._label>span {
+    color: #F16664;
+    font-weight: bold !important;
+}
+
+.side-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    width: 200px;
+    text-align: left;
+    background: #f26664;
+    color: #fff;
+    z-index: 999;
+    overflow-y: auto;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+footer.main-footer {
+    background: #686868;
+}
