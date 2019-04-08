@@ -116,3 +116,9 @@ function previewFile() {
         preview.src = "";
     }
 }
+
+// clear agent data
+function clearAgent(){
+    var fname = document.getElementById('fname');
+    alert(fname);
+}

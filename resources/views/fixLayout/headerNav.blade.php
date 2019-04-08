@@ -5,10 +5,10 @@
                 <div class="navbar-header">
                     <a id="toggle-btn" href="#" class="menu-btn">
                             <i class="fas fa-bars"> </i></a><a href="{{ url('home') }}" class="navbar-brand">
-                        <div class="brand-text d-none d-md-inline-block">
+                        <!-- <div class="brand-text d-none d-md-inline-block">
                             <span>Property </span>
                             <strong class="text-primary">Specialist</strong>
-                        </div>
+                        </div> -->
                     </a>
                 </div>
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">

@@ -24,6 +24,8 @@ Route::get('/categories', 'CategoryController@index')->name('categories');
 Route::get('/NewProperty', 'PropertyController@entry')->name('propertyEntry');
 Route::get('/PropertyList', 'PropertyController@list')->name('propertyList');
 
+
+
 Route::post('/store', 'PropertyController@validateform');
 Route::post('/updateProperty/{id}/property', 'PropertyController@updateExistingProperty');
 
@@ -31,6 +33,10 @@ Route::post('/updateProperty/{id}/property', 'PropertyController@updateExistingP
 Route::get('/preview/{id}/property', 'PropertyController@preview')->name('propertyPreview');
 Route::get('/updateproperty/{id}/property', 'PropertyController@updateproperty')->name('propertyPreview');
 Route::get('/delete/{id}/property', 'PropertyController@delete');
+
+Route::get('/agent', 'CreateAgentController@index')->name('agent');
+Route::post('/storeAgent', 'CreateAgentController@validationform');
+
 
 Route::get('storage/{filename}', function ($filename)
 {
