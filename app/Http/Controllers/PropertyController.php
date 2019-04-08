@@ -88,7 +88,7 @@ class PropertyController extends Controller
                 break;
         }
         $data['txt_price'] = 'required|integer';
-        $data[ 'file_propertyimage'] = 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048';
+        // $data[ 'file_propertyimage'] = 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048';
         $data['txt_province'] = 'required|string|max:255';
         $data['txt_city'] = 'required|string|max:255';
         $this->validate($request,$data);
@@ -105,13 +105,9 @@ class PropertyController extends Controller
         } else {
             $property = property::find($request->id);
         }
-            $image = $request->file('file_propertyimage'); //->store('public/imageUpload');
-            $input['imagename'] = time() . '.' . $image->getClientOriginalExtension();
-            $destinationPath = public_path( 'public/images');
-            $image->move($destinationPath, $input['imagename']);
-
-
-            $path =explode('/',$image);
+            // dd($request->file_propertyimage);
+            // $image = $request->file_propertyimage->store('public/imageUpload');
+            $path =explode('/',$request->file_propertyimage->store('public/imageUpload'));
             $property->slct_offerType = $request->slct_offerType;
             $property->slct_propertyType = $request->slct_propertyType;
             
