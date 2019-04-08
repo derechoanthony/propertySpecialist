@@ -15,7 +15,7 @@
     
     <!-- Main File-->
     <script src="{{ asset('external/js/front.js') }}"></script>
-    @if((Request::is('NewProperty')) || (Request::is('preview*')) || (Request::is('updateproperty*'))) 
+    @if((Request::is('NewProperty')) || (Request::is('preview*')) || (Request::is('updateproperty*')) || (Request::is('agent*'))) 
         <script src="{{ asset('js/custom.js') }}"></script>
         <script src="{{ asset('js/year-select.js') }}"></script>
     @endif

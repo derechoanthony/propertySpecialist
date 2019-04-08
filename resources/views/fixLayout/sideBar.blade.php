@@ -23,6 +23,7 @@
           <li><a href="{{ url('home') }}"> <i class="fas fa-tachometer-alt"></i>Home</a></li>
           <li><a href="{{ url('NewProperty') }}"> <i class="fas fa-cloud-upload-alt"></i>New Property</a></li>
           <li><a href="{{ url('PropertyList') }}"> <i class="fas fa-th-list"></i>Property List</a></li>
+          <li><a href="{{ url('agent') }}"> <i class="fas fa-user-tie"></i>Agents</a></li>
         </ul>
       </div>
     </div>
