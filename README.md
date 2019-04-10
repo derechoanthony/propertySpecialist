@@ -1,6 +1,5 @@
 # PropertySpecialist 
 
-
 ## Setup
 * `php artisan migrate --seed`
 * `npm run dev`
