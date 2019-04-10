@@ -1,12 +1,12 @@
 <section class="probootstrap-section probootstrap-section-lighter">
 <div class="container">
     <div class="row heading">
-        <h2 class="mt0 mb50 text-center">NEW TO MARKET</h2>
+    <h2 class="mt0 mb50 text-center">LATEST RENTAL</h2>
     </div>
     <div class="row">
 
         @foreach($data as $value)
-            @if( $value['slct_offerType'] == 'sell' ) 
+            @if( $value['slct_offerType'] == 'rent' ) 
                 <div class="col-md-4 col-sm-6">
                     <div class="probootstrap-card probootstrap-listing">
                     <div class="probootstrap-card-media">
@@ -17,8 +17,8 @@
                         <div class="probootstrap-listing-location">
                         <i class="icon-location2"></i> <span>{{ $value['txt_address'] }}</span>
                         </div>
-                            <div class="probootstrap-listing-category for-sale"><span>for sale</span></div>                        
-                        <div class="probootstrap-listing-price"><strong>₱ {{ $value['txt_price'] }}</strong> </div>
+                            <div class="probootstrap-listing-category for-rent"><span>for rent</span></div>                        
+                        <div class="probootstrap-listing-price"><strong>₱ {{ $value['txt_price'] }}</strong>/ month </div>
                     </div>
                     <div class="probootstrap-card-extra">
                         <ul>

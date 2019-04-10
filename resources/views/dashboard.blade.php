@@ -13,6 +13,24 @@
                 </div>
               </div>
             </div>
+
+            <div class="col-xl-2 col-md-4 col-6">
+              <div class="wrapper count-title d-flex">
+                <div class="icon"><i class="fa fa-users"></i></div>
+                <div class="name"><strong class="text-uppercase">Subscriber</strong>
+                  <div class="count-number">25</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-2 col-md-4 col-6">
+              <div class="wrapper count-title d-flex">
+                <div class="icon"><i class="fa fa-rss"></i></div>
+                <div class="name"><strong class="text-uppercase">Viewers</strong>
+                  <div class="count-number">25</div>
+                </div>
+              </div>
+            </div>
             <!-- Count item widget-->
             
           </div>

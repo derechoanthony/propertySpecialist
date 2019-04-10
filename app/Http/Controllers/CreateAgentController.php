@@ -30,6 +30,12 @@ class CreateAgentController extends Controller
         // return view('agent');
     }
 
+    public function preview($id)
+    {
+        $agentData = agent::find($id);
+        return view('agentList', ['data' => $agentData]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -58,6 +64,19 @@ class CreateAgentController extends Controller
         $new_route = $this->storeData('entry', $request);
         return redirect()->to($new_route);
     }
+    public function updateValidationform(Request $request){
+        $data = array();
+
+        $data['fname'] = 'required|min:3|max:50';
+        $data['lname'] = 'required|min:3|max:50';
+        $data['contact'] = 'required';
+        $data['email'] = 'required|email';
+
+        $this->validate($request,$data);
+
+        $new_route = $this->storeData('update', $request);
+        return redirect()->to($new_route);
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -69,9 +88,8 @@ class CreateAgentController extends Controller
     {
         if($type === 'entry'){
             $agent = new agent();
-            $msg = 'New agent successfully added';
         }else{
-
+            $agent = agent::find($request->id);
         }
         $path =explode('/',$request->file_propertyimage->store('public/imageUpload'));
         $agent->fname =  $request->fname;
@@ -105,7 +123,8 @@ class CreateAgentController extends Controller
      */
     public function edit($id)
     {
-        //
+        $agentData = agent::find($id);
+        return view('agentUpdate', ['data' => $agentData]);
     }
 
     /**
@@ -128,6 +147,8 @@ class CreateAgentController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $property = agent::find($id);
+        $property->delete($property->id);
+        return redirect()->back();
     }
 }

@@ -35,7 +35,7 @@
             @else
                 <label>Image Uploaded</label><br>
             @endif
-            <img class="form-control" name="imgpreview" src="{{ asset('/storage/imageUpload/'.$property->_token) }}" height="200" alt="Image preview...">
+            <img class="form-control" name="imgpreview" src="{{ asset('/storage/public/imageUpload/'.$property->_token) }}" height="200" alt="Image preview...">
         </div>
     </div>
     <div class="col-lg-5 hidden">

@@ -6,7 +6,7 @@
       <!-- Sidebar Header    -->
       <div class="sidenav-header d-flex align-items-center justify-content-center">
         <!-- User Info-->
-        <div class="sidenav-header-inner text-center"><img src="{{ asset('external/img/avatar-1.jpg') }}" alt="person" class="img-fluid rounded-circle">
+        <div class="sidenav-header-inner text-center"><img src="{{ asset('images/generic-user-purple.png') }}" alt="person" class="img-fluid rounded-circle">
           <h2 class="h5">{{ Auth::user()->name }}</h2><span>Web Developer</span>
         </div>
         <!-- Small Brand information, appears on minimized sidebar-->
