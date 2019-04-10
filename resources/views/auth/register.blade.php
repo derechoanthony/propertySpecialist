@@ -1,76 +1,105 @@
-@extends('layouts.app')
+@extends('frontLayouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Register</div>
-                <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ route('register') }}">
-                        {{ csrf_field() }}
-                        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                            <label for="name" class="col-md-4 control-label">Name</label>
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
-                                @if ($errors->has('name'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-                        <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">
-                            <label for="username" class="col-md-4 control-label">Username</label>
-                            <div class="col-md-6">
-                                <input id="username" type="text" class="form-control" name="username" value="{{ old('username') }}" required>
-                                @if ($errors->has('username'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('username') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+<section class="probootstrap-section">
+    
+   
 
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Register
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+    <form id="regForm" action="">
+
+<h1>Register:</h1>
+
+<!-- One "tab" for each step in the form: -->
+<div class="tab">Account Registration
+    <div class="row">
+        <h4 class="info-text"> Lets start with the basic information (with validation)</h4>
+        <div class="col-sm-4 col-sm-offset-1">
+            <div class="picture-container">
+                <div class="picture">
+                    <img src="{{ asset('images/default-avatar.png') }}" class="img-responsive img-circle" style="border: 1px red;" id="wizardPicturePreview" title=""/>
+                    <input type="file" id="wizard-picture">
                 </div>
+                <h6>Choose Picture</h6>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+            <label>First Name <small>(required)</small></label>
+            <input name="firstname" type="text" class="form-control" placeholder="Andrew...">
+            </div>
+            <div class="form-group">
+            <label>Last Name <small>(required)</small></label>
+            <input name="lastname" type="text" class="form-control" placeholder="Smith...">
+            </div>
+        </div>
+        <div class="col-sm-5">
+            <div class="form-group">
+                <label>Email <small>(required)</small></label>
+                <input name="email" type="email" class="form-control" placeholder="andrew@creative-tim.com">
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>TIN <small>(required)</small></label>
+                <input name="email" type="email" class="form-control" placeholder="andrew@creative-tim.com">
+            </div>
+        </div>
+        <div class="col-sm-5">
+            <div class="form-group">
+                <label>Contact <small>(required)</small></label>
+                <input name="email" type="email" class="form-control" placeholder="andrew@creative-tim.com">
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>BirtDate <small>(required)</small></label>
+                <input name="email" type="email" class="form-control" placeholder="andrew@creative-tim.com">
+            </div>
+        </div>
+        <div class="col-sm-5">
+            <div class="form-group">
+                <label>Lead <small>(required)</small></label>
+                <input name="email" type="email" class="form-control" placeholder="andrew@creative-tim.com">
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>Team <small>(required)</small></label>
+                <input name="email" type="email" class="form-control" placeholder="andrew@creative-tim.com">
+            </div>
+        </div>
+        <div class="col-sm-11">
+            <div class="form-group">
+                <label>Address <small>(required)</small></label>
+                <input name="email" type="email" class="form-control" placeholder="andrew@creative-tim.com">
             </div>
         </div>
     </div>
+  <p><input placeholder="First name..." oninput="this.className = ''"></p>
+  <p><input placeholder="Last name..." oninput="this.className = ''"></p>
 </div>
+
+<div class="tab">Contact Info:
+  <p><input placeholder="E-mail..." oninput="this.className = ''"></p>
+  <p><input placeholder="Phone..." oninput="this.className = ''"></p>
+</div>
+
+
+<div style="overflow:auto;">
+  <div style="float:right;">
+    <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+    <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+  </div>
+</div>
+
+<!-- Circles which indicates the steps of the form: -->
+<div style="text-align:center;margin-top:40px;">
+  <span class="step"></span>
+  <span class="step"></span>
+</div>
+
+</form>
+
+
+</section>
 @endsection

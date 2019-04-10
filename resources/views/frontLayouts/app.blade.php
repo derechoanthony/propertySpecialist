@@ -6,6 +6,7 @@
         <title>PropertySpecialist</title>
         <meta name="description" content="Cebu realestate properties">
         <meta name="keywords" content="realestate cebu, realestate property">
+        <meta name="google-site-verification" content="lupDBzZK77FGX2j8yEuNJ1-N3OfZRje2515DMwoItec" />
         
         @include('externalAsset.defaultAssetStyleSheet')
     </head>
