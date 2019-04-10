@@ -3,6 +3,9 @@
 namespace PropertySpecialist\Http\Controllers;
 
 use Illuminate\Http\Request;
+use PropertySpecialist\property;
+use PropertySpecialist\agent;
+use Illuminate\Support\Facades\Validator;
 
 class defaultController extends Controller
 {
@@ -13,7 +16,26 @@ class defaultController extends Controller
      */
     public function index()
     {
-        return view('default');
+        $property = property::select('id', '_token', 'txt_title','slct_offerType', 'txt_address','txt_price', 'txt_flrarea', 'txt_lotarea','txt_bedrooms', 'txt_bathrooms', 'txt_carspace')
+            ->paginate(5);
+        return view( 'default', ['data' => $property]);
+    }
+    public function buypage()
+    {
+        $property = property::select('id', '_token', 'txt_title','slct_offerType', 'txt_address','txt_price', 'txt_flrarea', 'txt_lotarea','txt_bedrooms', 'txt_bathrooms', 'txt_carspace')
+            ->paginate(5);
+        return view( 'listBuy', ['data' => $property]);
+    }
+    public function rentpage()
+    {
+        $property = property::select('id', '_token', 'txt_title','slct_offerType', 'txt_address','txt_price', 'txt_flrarea', 'txt_lotarea','txt_bedrooms', 'txt_bathrooms', 'txt_carspace')
+            ->paginate(5);
+        return view( 'listRent', ['data' => $property]);
+    }
+    public function teampage(){
+        $agents = agent::select('id', 'fname', 'lname', 'image', 'contact', 'email', 'created_at')
+            ->paginate(5);
+        return view('team', ['data' => $agents]);
     }
 
     /**

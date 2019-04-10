@@ -17,11 +17,11 @@
         <div class="probootstrap-footer-widget">
         <h4 class="heading">&nbsp;</h4>
         <ul class="stack-link qlinks">
-            <li><a href="#">ABOUT US</a></li>
-            <li><a href="#">CAREERS</a></li>
+            <li><a href="{{ url('/aboutus') }}">ABOUT US</a></li>
+            <li><a href="{{ url('/careers') }}">CAREERS</a></li>
             <li><a href="#">BLOG</a></li>
-            <li><a href="#">PRIVACY POLICY</a></li>
-            <li><a href="#">TERMS & CONDITIONS</a></li>
+            <li><a href="{{ url('/privacy') }}">PRIVACY POLICY</a></li>
+            <li><a href="{{ url('/terms') }}">TERMS & CONDITIONS</a></li>
         </ul>
         </div> 
     </div>

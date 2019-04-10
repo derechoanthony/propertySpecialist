@@ -1,0 +1,1 @@
+@include('defaultPages.indexPage.newToMarket')

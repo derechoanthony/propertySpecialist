@@ -29,9 +29,9 @@
     </div>
     <div class="col-lg-5">
         <div class="form-group">
-            <label>Upload Image</label>
-            <input type="file" class="form-control" onchange="previewFile()" name="file_propertyimage"><br>
-            <img class="form-control hidden" name="imgpreview" src="" height="200" alt="Image preview...">
+            <label>Upload Image</label><br>
+            <img class="form-control hidden" name="imgpreview" src="" height="200" alt="Image preview..."><br>
+            <input type="file" class="form-control" onchange="previewFile()" name="file_propertyimage">
         </div>
     </div>
     <div class="col-lg-5 hidden">
