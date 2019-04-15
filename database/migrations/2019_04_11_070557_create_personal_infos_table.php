@@ -15,6 +15,7 @@ class CreatePersonalInfosTable extends Migration
     {
         Schema::create('personal_infos', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer("user_id")->index();
             $table->string('fname');
             $table->string('lname');
             $table->string('address');
@@ -25,8 +26,6 @@ class CreatePersonalInfosTable extends Migration
             $table->string('photo');
             $table->string('team');
             $table->string('lead');
-            $table->tinyInteger('type');
-            $table->tinyInteger('status')->default(1);
             $table->timestamps();
             $table->softDeletes();
         });
