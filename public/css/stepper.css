@@ -40,3 +40,10 @@ body {
     line-height: 1.428571429;
     border-radius: 15px;
 }
+@media screen and (max-width: 768px) {
+    .stepwizard {
+        display: table;
+        width: 100%;
+        position: relative;
+    }
+}
