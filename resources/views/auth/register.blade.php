@@ -1,105 +1,140 @@
 @extends('frontLayouts.app')
 
 @section('content')
-<section class="probootstrap-section">
+    <section class="probootstrap-section">
+            <div class="wrapper">
+                <form action="" id="wizard">
+                    <!-- SECTION 1 -->
+                    <h2></h2>
+                    <section>
+                        <div class="inner">
+                            <div class="image-holder">
+                                <img src="{{ asset('stepper/images/form-wizard-1.jpg') }}" alt="">
+                            </div>
+                            <div class="form-content" >
+                                <div class="form-header">
+                                    <h3>Registration</h3>
+                                </div>
+                                <p>Please fill with your details</p>
+                                <div class="form-row">
+                                    <div class="form-holder">
+                                        <input type="text" placeholder="First Name" class="form-control">
+                                    </div>
+                                    <div class="form-holder">
+                                        <input type="text" placeholder="Last Name" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-holder">
+                                        <input type="date" placeholder="Birth Date" class="form-control">
+                                    </div>
+                                    <div class="form-holder">
+                                        <input type="number" placeholder="Age" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    
+                                    <div class="form-holder" style="align-self: flex-end; transform: translateY(4px);">
+                                        <div class="checkbox-tick">
+                                            <label class="male">
+                                                <input type="radio" name="gender" value="male" checked> Male<br>
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="female">
+                                                <input type="radio" name="gender" value="female"> Female<br>
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
     
-   
-
-    <form id="regForm" action="">
-
-<h1>Register:</h1>
-
-<!-- One "tab" for each step in the form: -->
-<div class="tab">Account Registration
-    <div class="row">
-        <h4 class="info-text"> Lets start with the basic information (with validation)</h4>
-        <div class="col-sm-4 col-sm-offset-1">
-            <div class="picture-container">
-                <div class="picture">
-                    <img src="{{ asset('images/default-avatar.png') }}" class="img-responsive img-circle" style="border: 1px red;" id="wizardPicturePreview" title=""/>
-                    <input type="file" id="wizard-picture">
-                </div>
-                <h6>Choose Picture</h6>
+                    <!-- SECTION 2 -->
+                    <h2></h2>
+                    <section>
+                        <div class="inner">
+                            <div class="image-holder">
+                                <img src="{{ asset('stepper/images/form-wizard-2.jpg') }}" alt="">
+                            </div>
+                            <div class="form-content">
+                                <div class="form-header">
+                                    <h3>Registration</h3>
+                                </div>
+                                <p>Please fill with additional info</p>
+                                <div class="form-row">
+                                    <div class="form-holder">
+                                        <input type="text" placeholder="Email" class="form-control">
+                                    </div>
+                                    <div class="form-holder">
+                                        <input type="text" placeholder="Phone Number" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-holder w-100">
+                                        <input type="text" placeholder="Address" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-holder">
+                                        <input type="text" placeholder="City" class="form-control">
+                                    </div>
+                                    <div class="form-holder">
+                                        <input type="text" placeholder="Zip Code" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+    
+                    <!-- SECTION 3 -->
+                    <h2></h2>
+                    <section>
+                        <div class="inner">
+                            <div class="image-holder">
+                                <img src="{{ asset('stepper/images/form-wizard-3.jpg') }}" alt="">
+                            </div>
+                            <div class="form-content">
+                                <div class="form-header">
+                                    <h3>Registration</h3>
+                                </div>
+                                <p>Supporting Documents</p>
+                                <div class="form-row">
+                                    <div class="form-holder">
+                                        <input type="text" placeholder="Team" class="form-control">
+                                    </div>
+                                    <div class="form-holder">
+                                        <input type="text" placeholder="Lead" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-holder ">
+                                        <input type="text" placeholder="TIN Number" class="form-control">
+                                    </div>
+                                    <div class="form-holder prc-holder">
+                                            <input type="text" style="display:none;" placeholder="PRC Number" class="form-control prc">
+                                    </div>
+                                </div>                                    
+                                <div class="form-row">
+                                        <div class="form-holder">
+                                                <div class="checkbox-tick">
+                                                    <label class="agent">
+                                                        <input type="radio" name="type" class="type" value="agent" checked> Agent<br>
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                    <label class="broker">
+                                                        <input type="radio" name="type" class="type" value="broker"> Broker<br>
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </form>
             </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="form-group">
-            <label>First Name <small>(required)</small></label>
-            <input name="firstname" type="text" class="form-control" placeholder="Andrew...">
-            </div>
-            <div class="form-group">
-            <label>Last Name <small>(required)</small></label>
-            <input name="lastname" type="text" class="form-control" placeholder="Smith...">
-            </div>
-        </div>
-        <div class="col-sm-5">
-            <div class="form-group">
-                <label>Email <small>(required)</small></label>
-                <input name="email" type="email" class="form-control" placeholder="andrew@creative-tim.com">
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="form-group">
-                <label>TIN <small>(required)</small></label>
-                <input name="email" type="email" class="form-control" placeholder="andrew@creative-tim.com">
-            </div>
-        </div>
-        <div class="col-sm-5">
-            <div class="form-group">
-                <label>Contact <small>(required)</small></label>
-                <input name="email" type="email" class="form-control" placeholder="andrew@creative-tim.com">
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="form-group">
-                <label>BirtDate <small>(required)</small></label>
-                <input name="email" type="email" class="form-control" placeholder="andrew@creative-tim.com">
-            </div>
-        </div>
-        <div class="col-sm-5">
-            <div class="form-group">
-                <label>Lead <small>(required)</small></label>
-                <input name="email" type="email" class="form-control" placeholder="andrew@creative-tim.com">
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="form-group">
-                <label>Team <small>(required)</small></label>
-                <input name="email" type="email" class="form-control" placeholder="andrew@creative-tim.com">
-            </div>
-        </div>
-        <div class="col-sm-11">
-            <div class="form-group">
-                <label>Address <small>(required)</small></label>
-                <input name="email" type="email" class="form-control" placeholder="andrew@creative-tim.com">
-            </div>
-        </div>
-    </div>
-  <p><input placeholder="First name..." oninput="this.className = ''"></p>
-  <p><input placeholder="Last name..." oninput="this.className = ''"></p>
-</div>
 
-<div class="tab">Contact Info:
-  <p><input placeholder="E-mail..." oninput="this.className = ''"></p>
-  <p><input placeholder="Phone..." oninput="this.className = ''"></p>
-</div>
-
-
-<div style="overflow:auto;">
-  <div style="float:right;">
-    <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-    <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
-  </div>
-</div>
-
-<!-- Circles which indicates the steps of the form: -->
-<div style="text-align:center;margin-top:40px;">
-  <span class="step"></span>
-  <span class="step"></span>
-</div>
-
-</form>
-
-
-</section>
+    </section>
 @endsection
